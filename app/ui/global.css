@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+p {
+  font-family: var(--font-lusitana);
+}
 input[type='number'] {
   -moz-appearance: textfield;
   appearance: textfield;
