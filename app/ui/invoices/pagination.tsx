@@ -12,7 +12,7 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
   const searchParams = useSearchParams();
   const currentPage = Number(searchParams.get('page')) || 1;
 
-  // NOTE: Uncomment this code in Chapter 11
+ 
 
   const allPages = generatePagination(currentPage, totalPages);
   const createPageURL = (pageNumber: number | string) => {
@@ -24,7 +24,6 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
 
   return (
     <>
-      {/*  NOTE: Uncomment this code in Chapter 11 */}
 
       <div className="inline-flex">
         <PaginationArrow
