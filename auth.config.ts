@@ -5,6 +5,8 @@ export const authConfig = {
     signIn: "/login",
   },
   callbacks: {
+    /* . It is called before a request is completed, and it receives an object with the auth and request properties. 
+    The auth property contains the user's session, and the request property contains the incoming request. */
     authorized({ auth, request: { nextUrl } }) {
         
       const isLoggedIn = !!auth?.user;
@@ -18,5 +20,8 @@ export const authConfig = {
       return true;
     },
   },
+  /* The providers option is an array where you list different login options. 
+  For now, it's an empty array to satisfy NextAuth config. 
+  You'll learn more about it in the Adding the Credentials provider section. */
   providers: [], // Add providers with an empty array for now
 } satisfies NextAuthConfig;
